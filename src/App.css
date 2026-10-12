@@ -1,0 +1,451 @@
+/* =========================
+   DASHBOARD LAYOUT
+========================= */
+
+.dashboard {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.career {
+  margin: 0;
+  color: #39ff88;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.dashboard-header h1 {
+  margin: 10px 0;
+  font-size: clamp(30px, 4vw, 42px);
+  letter-spacing: -1.5px;
+}
+
+.dashboard-header p:not(.career) {
+  margin-bottom: 0;
+  color: #a3a3a3;
+  line-height: 1.6;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.add-job-button {
+  padding: 12px 18px;
+  border: 1px solid #39ff88;
+  border-radius: 8px;
+  background: #39ff88;
+  color: #07110a;
+  font-weight: 700;
+}
+
+.add-job-button:hover {
+  background: #24e875;
+  transform: translateY(-2px);
+}
+
+/* Application action buttons */
+
+.application-card button {
+  padding: 9px 13px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #202020;
+  color: #f5f5f5;
+  font-size: 13px;
+}
+
+.application-card button:hover {
+  border-color: #39ff88;
+  color: #39ff88;
+}
+
+.application-card button:focus-visible,
+.add-job-button:focus-visible,
+.form-actions button:focus-visible {
+  outline: 2px solid #39ff88;
+  outline-offset: 3px;
+}
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  padding: 22px;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  background: #141414;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.stat-card:hover {
+  border-color: #39ff88;
+  transform: translateY(-3px);
+}
+
+.stat-card p {
+  margin: 0;
+  color: #a3a3a3;
+  font-size: 14px;
+}
+
+.stat-card h2 {
+  margin: 14px 0 0;
+  font-size: 30px;
+}
+
+/* =========================
+   APPLICATIONS SECTION
+========================= */
+
+.applications-section {
+  margin-top: 40px;
+}
+
+.applications-section > h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.empty-state {
+  padding: 30px 20px;
+  border: 1px dashed #333;
+  border-radius: 12px;
+  color: #a3a3a3;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* =========================
+   SEARCH AND FILTERS
+========================= */
+
+.application-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.application-filters input,
+.application-filters select {
+  min-height: 44px;
+  padding: 12px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #141414;
+  color: #f5f5f5;
+}
+
+.application-filters input {
+  flex: 1;
+  min-width: 0;
+}
+
+.application-filters input:focus,
+.application-filters select:focus {
+  border-color: #39ff88;
+  outline: 1px solid #39ff88;
+}
+
+/* =========================
+   APPLICATION CARDS
+========================= */
+
+.application-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 12px;
+  padding: 20px 22px;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  background: #141414;
+  transition: border-color 0.2s ease;
+}
+
+.application-card:hover {
+  border-color: #3b3b3b;
+}
+
+.application-card > div {
+  flex: 1;
+  min-width: 140px;
+}
+
+.application-card h3 {
+  margin: 0 0 7px;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+
+.application-card p {
+  margin: 0;
+  color: #a3a3a3;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+
+.status-badge {
+  flex-shrink: 0;
+  padding: 7px 12px;
+  border: 1px solid #28583b;
+  border-radius: 20px;
+  background: #14291d;
+  color: #39ff88;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================
+   APPLICATION FORM
+========================= */
+
+.application-form {
+  display: grid;
+  gap: 18px;
+  width: 100%;
+  max-width: 600px;
+  margin: 24px 0;
+  padding: 24px;
+  border: 1px solid #262626;
+  border-radius: 14px;
+  background: #141414;
+}
+
+.application-form h2 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+
+.application-form label {
+  display: grid;
+  gap: 8px;
+  color: #d4d4d4;
+  font-size: 14px;
+}
+
+.application-form input,
+.application-form select,
+.application-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #0a0a0a;
+  color: #f5f5f5;
+  outline: none;
+}
+
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus {
+  border-color: #39ff88;
+}
+
+.application-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.form-actions button {
+  padding: 11px 16px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #202020;
+  color: #f5f5f5;
+}
+
+.form-actions button:hover {
+  border-color: #39ff88;
+}
+
+.form-actions button[type="submit"] {
+  border-color: #39ff88;
+  background: #39ff88;
+  color: #07110a;
+  font-weight: 700;
+}
+
+.form-actions button[type="submit"]:hover {
+  background: #24e875;
+}
+
+/* =========================
+   APPLICATION DETAILS
+========================= */
+
+.application-details {
+  width: 100%;
+  max-width: 720px;
+  margin: 32px auto;
+  padding: 28px;
+  border: 1px solid #262626;
+  border-radius: 14px;
+  background: #141414;
+}
+
+.application-details > button {
+  padding: 10px 14px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #202020;
+  color: #f5f5f5;
+}
+
+.application-details > button:hover {
+  border-color: #39ff88;
+  color: #39ff88;
+}
+
+.application-details h2 {
+  margin: 28px 0 8px;
+  font-size: 28px;
+  overflow-wrap: anywhere;
+}
+
+.application-details > p {
+  color: #a3a3a3;
+}
+
+.details-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid #262626;
+}
+
+.details-row > span:first-child {
+  color: #a3a3a3;
+}
+
+.details-row a {
+  color: #39ff88;
+  overflow-wrap: anywhere;
+}
+
+.details-row a:hover {
+  text-decoration: underline;
+}
+
+.details-row p {
+  max-width: 60%;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 800px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .application-card {
+    justify-content: flex-start;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 28px 16px;
+  }
+
+  .dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .add-job-button {
+    width: 100%;
+  }
+
+  .application-filters {
+    flex-direction: column;
+  }
+
+  .application-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .application-card > div {
+    width: 100%;
+  }
+
+  .application-card button {
+    width: 100%;
+  }
+
+  .application-form {
+    padding: 18px;
+  }
+
+  .form-actions button {
+    flex: 1;
+  }
+
+  .application-details {
+    padding: 18px;
+  }
+
+  .details-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .details-row p {
+    max-width: 100%;
+  }
+}
